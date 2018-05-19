@@ -5,8 +5,10 @@ body {
 }
 #chatdiv {
  position:absolute;
+ left:900px;
 }
 #chat {
+    border-radius: 30px;
     width: 350px;
     margin:auto;
     background-color: #FAFAFA;
@@ -15,6 +17,7 @@ body {
     text-align: center;
 }
 #input {
+    border-radius: 30px;
     width: 350px;
     margin:auto;
     background-color: #acacac;
