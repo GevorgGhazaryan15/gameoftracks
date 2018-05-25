@@ -7,10 +7,7 @@ function getName(msg) {
 getName();
 
 function drawPlayer() { // Draw the player
-    fill("red");
-    rect(bazaX,bazaY,side*2,side*2);
-    fill('red');
-    rect(playerX, playerY, side, side);
+    image(playerImg,playerX,playerY,side,side);
     if (playerHasGold) {
         fill(255, 223, 0); // Gold's color
         rect(playerX + (side / 8), playerY + (side / 8), side - (side / 4), side - (side / 4))
@@ -18,14 +15,19 @@ function drawPlayer() { // Draw the player
 }
 
 function drawResources() { // Draw the resources
-    fill('black');
-    for (var coords of obstacles) {
-        rect(coords.x, coords.y, side, side);
+    for(var i in gold){
+        image(goldImg,gold[i].x,gold[i].y,side,side);
     }
-    fill(255, 223, 0);
-    for (var coords of gold) {
-        rect(coords.x, coords.y, side, side);
+    for(var i in obstacles){
+        image(qarImg,obstacles[i].x,obstacles[i].y,side,side);
     }
+    image(baza1img,0,0,side*2,side*2);
+    image(baza2img,23*side,0,side*2,side*2);
+    image(baza3img,0,23*side,side*2,side*2);
+    image(baza4img,23*side,23*side,side*2,side*2);
+   
+    
+   
 }
 
 // Detect the collision
